@@ -1,7 +1,10 @@
+/* Universal selector */
 * {
     font-family: 'Space Grotesk', sans-serif;;
     background-color: #9bb1f2;
 }
+
+/* Logo */
 .center {
     display: flex;
     justify-content: center;
@@ -10,13 +13,18 @@
     background-color: transparent;
     bottom: 55px;
 }
+
+/* Logo */
 img {
     max-width: 400px;
     background: rgba(60, 60, 60, 0);
 }
+
+/* Header color */
 .nav-wrapper {
     background-color: #527af2;
-  }
+}
+
 a {
     background-color: #527af2;
 }
