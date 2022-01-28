@@ -3,15 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Link to Materialize -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link type="text/css" rel="stylesheet" href="./css/materialize.min.css"  media="screen,projection"/>
-      <link rel="stylesheet" href="./css/style.css">
+    <link type="text/css" rel="stylesheet" href="../../public/css/materialize.min.css"  media="screen,projection"/>
+      <link rel="stylesheet" href="../../public/css/style.css">
+      <!-- Link to Slick -->
       <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Podcast 411</title>
 </head>
 <body>
+  <!-- Header with logo -->
     <header>
         <nav>
             <div class="nav-wrapper">
@@ -22,32 +24,29 @@
               <ul id="nav-mobile" class="right hide-on-med-and-down">
                 <li><a href="">Profile</a></li>
               </ul>
-              <li class="slider">
-                <li>
-                  <h1>Slide 1</h1>
-                </li>
-                <li>
-                  <h1>Slide 2</h1>
-                </li>
-                <h1>Slide 3</h1>
-              </li>
-              </ul>
             </div>
           </nav>
             <div class="center">
-                <img src="../assets/Podcast411Logo.png" alt="Podcast411"/>
+                <img src="../../assets/Podcast411Logo.png" alt="Podcast411"/>
             </div>
     </header>
-<<<<<<< HEAD:public/index.html
-=======
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    <!-- Insert Slider -->
+    <div>
+      <ul class="slider">
+        <li>Slide 1</li>
+        <li>Slide 2</li>
+        <li>Slide 3</li>
+      </ul>
+    </div>
+</body>
+  <!-- Script for JQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
     integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
-    crossorigin="anonymous"></script>    
+    crossorigin="anonymous"></script>  
+    <!-- Script for Slick -->
 <script type = "text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
 <script type="text/javascript">
-$('slider').slick();
-</script>
-
->>>>>>> 6a08de6be2db11e06bbf76611274086221c1e210:views/html/index.html
+$('slider').slick();</script>
+<!-- Script for materialize -->
 <link rel="script" href="./js/materialize.min.js">
 </html>
