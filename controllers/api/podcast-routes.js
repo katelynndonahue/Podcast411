@@ -19,6 +19,19 @@ router.post('/', withAuth, async (req, res) => {
   }
 });
 
+router.get('/:id',withAuth, async(req, res)=>{
+    try{
+        const podcastData = await Podcast.findByPK(req.params.id)
+        const podcast = podcastData.get({plain: true});
+        res.render('singlePodcast', {
+            ...podcast,
+            logged_in: req.session.logged_in
+        });
+    }catch(err){
+        res.status(500).json(err);
+    }
+})
+
 router.delete('/:id', withAuth, async (req, res) => {
   try {
     const podcastData = await Podcast.destroy({
@@ -38,5 +51,6 @@ router.delete('/:id', withAuth, async (req, res) => {
     res.status(500).json(err);
   }
 });
+
 
 module.exports = router;
