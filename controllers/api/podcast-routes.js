@@ -19,6 +19,15 @@ router.post('/', withAuth, async (req, res) => {
   }
 });
 
+router.get("/", async (req, res) => {
+	try {
+		const podcastData = await Podcast.findAll();
+		res.status(200).json(podcastData);
+	} catch (err) {
+		res.status(500).json(err);
+	}
+});
+
 router.get('/:id',withAuth, async(req, res)=>{
     try{
         const podcastData = await Podcast.findByPK(req.params.id)
