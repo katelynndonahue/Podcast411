@@ -3,6 +3,24 @@
     background-color: #9bb1f2;
 }
 
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-color: transparent;
+    bottom: 55px;
+}
+
 img {
     max-width: 400px;
+    background: rgba(60, 60, 60, 0);
+}
+
+.nav-wrapper {
+    background-color: #527af2;
+  }
+
+a {
+    background-color: #527af2;
 }
