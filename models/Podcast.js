@@ -15,6 +15,7 @@ Podcast.init(
 			type: DataTypes.STRING,
 			allowNull: false,
 		},
+		// url thumbnail publisher
 		playlist_id: {
 			type: DataTypes.INTEGER,
 			references: {

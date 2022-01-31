@@ -5,18 +5,22 @@ const withAuth = require('../../utils/auth');
 const client = Client({apiKey: process.env.API_KEY});
 // let searchEl = document.querySelector(".search");
 // searchEl.value.trim();
-router.get('/', async (req,res) =>{
-    console.log(req);
+router.post('/', async (req,res) =>{
+    console.log(req.body);
+    // let searchEl = document.querySelector(".search");
+	// searchEl.value.trim();
     client
 			.search({
-				q: "hello",
+				q: req.body,
 				episode_count_max: 25,
 				safe_mode: 1,
 			})
 			.then((response) => {
 				const podcastData = response.data.results;
 				// console.log(podcastData);
-                podcasts = podcastData.map((pod)=>pod)
+                podcasts = podcastData.map((pod)=>pod.podcast)
+                // console.log(podcasts);
+                // res.redirect("/api/search");
                 res.render('search',
                 podcasts)
 			}).catch((error)=>{
