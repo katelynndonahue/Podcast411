@@ -13,6 +13,16 @@
     background-color: transparent;
 }
 
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-color: transparent;
+    background-origin: padding-box;
+    padding: 30px;
+}
+
 /* Logo */
 img {
     max-width: 400px;
@@ -151,35 +161,3 @@ span {
     padding: 0.75rem;
 }
 
-.form_input:focus {
-    border-bottom: #536dfe !important; 
-}
-
-.form_link {
-    background: rgba(60, 60, 60, 0);
-    color: #536dfe;
-}
-
-.form_link:hover {
-    color: #f52557;
-}
-
-/* Search Page */
-
-.search-results {
-    font-size: 30px;
-    padding: 100px;
-    color: white;
-    font-weight: bold;
-
-}
-
-.collection {
-    max-width: 800px;
-    left: 250px;
-    margin-top: 30px;
-}
-
-p {
-    background: rgba(60, 60, 60, 0);
-}
