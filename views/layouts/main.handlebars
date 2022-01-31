@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <!-- Link to Materialize -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link type="text/css" rel="stylesheet" href="../../public/css/materialize.min.css"  media="screen,projection"/>
-      <link rel="stylesheet" href="../../public/css/style.css">
+    <link type="text/css" rel="stylesheet" href="/css/materialize.min.css"  media="screen,projection"/>
+      <link rel="stylesheet" href="/css/style.css">
       <!-- Link to Slick -->
       <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -38,10 +38,17 @@
             </div>
     </header>
     <main>
-
-      {{{body}}}
-      
+    <!-- Search bar -->
+    <div class="wrapper">
+      <input type="text" class="input" placeholder="Self-Care Podcast!">
+      <div class="searchbtn"> 
+        <i class="material-icons">search</i>
+      </div>
+    </div>
     </main>
+    
+    {{{body}}}
+    
     <!-- Footer with api logo -->
     <footer class="shadow">
       <div class="logo">
@@ -64,5 +71,5 @@
 <script type="text/javascript">
 $('slider').slick();</script>
 <!-- Script for materialize -->
-<link rel="script" href="./js/materialize.min.js">
+<link rel="script" href="/js/materialize.min.js">
 </html>
