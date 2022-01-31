@@ -14,6 +14,8 @@ router.get('/', async (req,res)=>{
   
     // console.log(podcasts);
   // res.json(podcasts)
+
+    
     res.render('homepage',{
       podcastData,
       loggedIn: req.session.loggedIn
@@ -29,6 +31,7 @@ router.get("/search", async (req,res)=>{
 })
 // Login route
 router.get('/login', (req, res) => {
+  
   if (req.session.loggedIn) {
     res.redirect('/');
     return;
@@ -47,5 +50,7 @@ router.post('/logout', (req, res) => {
     res.status(404).end();
   }
 });
+
+
 
 module.exports = router
