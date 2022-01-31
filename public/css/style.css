@@ -164,6 +164,13 @@ span {
     color: #f52557;
 }
 
+.container-create {
+    margin-bottom: 200px;
+    padding-top: 20px;
+}
+
+
+
 /* Search Page */
 
 .search-results {
