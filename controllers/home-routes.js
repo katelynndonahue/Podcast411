@@ -11,14 +11,13 @@ router.get('/', async (req,res)=>{
     // Get response json data here
     const podcastData = response.data.curated_lists
    console.log(podcastData);
-    
-    const podcasts = podcastData.map((pod)=>pod)
-    console.log(podcasts);
-    // res.json(podcasts)
+  
+    // console.log(podcasts);
+  // res.json(podcasts)
     res.render('homepage',{
-      podcasts,
-      
-    }) 
+      podcastData,
+      loggedIn: req.session.loggedIn
+    })
     // return podcasts
 }).catch((error) => {
     console.log(error)

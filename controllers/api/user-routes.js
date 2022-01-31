@@ -34,7 +34,7 @@ router.post("/", async (req, res) => {
     // create a new user
     try {
       const newUser = req.body
-      newUser.hashedPassword = await bcrypt.hash(req.body.password, saltRounds);
+      // newUser.hashedPassword = await bcrypt.hash(req.body.password, saltRounds);
       const userData = await User.create(newUser);
       if (!userData) {
         res.status(404).json({ message: "Please try again!" });
@@ -50,7 +50,9 @@ router.post("/", async (req, res) => {
   });
 // Login
 router.post('/login', async (req, res) => {
-    try {
+
+  console.log(req.body);
+  try {
       const dbUserData = await User.findOne({
         where: {
           email: req.body.email,

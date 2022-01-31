@@ -16,5 +16,8 @@
       </button>
     </form>
 
-<script src="/js/search.js"></script>
-    
+    {{#each podcastData as |podcast|}}
+    {{> podcast-details}}
+    {{/each}}
+
+<script src ="/js/search.js"></script>
