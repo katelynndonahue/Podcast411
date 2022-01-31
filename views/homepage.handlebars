@@ -2,10 +2,14 @@
     <!-- Search bar -->
     <form class="wrapper" id= "searchForm">
       <input type="text" class="search" placeholder="Self-Care Podcast!" name = "search" id= "search">
-      <button type = "submit" class="searchbtn" > 
-        <i class="material-icons">search</i>
+      <button type = "submit" class="searchbtn white" > 
+        <i class="material-icons white">search</i>
       </button>
     </form>
+
+    <div>
+      <h1 class="featured">Featured Playlists</h1>
+    </div>
 
     {{#each podcastData as |podcast|}}
     {{> podcast-details}}
