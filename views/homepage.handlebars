@@ -1,14 +1,19 @@
 
     <!-- Search bar -->
-    <form class="wrapper" id= "searchForm">
+    {{!-- <form class="wrapper" id= "searchForm">
       <input type="text" class="search" placeholder="Self-Care Podcast!" name = "search" id= "search">
       <button type = "submit" class="searchbtn" > 
         <i class="material-icons">search</i>
       </button>
     </form>
-
+    <div id = "searchRes"> --}}
+      
+    </div>
     {{#each podcastData as |podcast|}}
     {{> podcast-details}}
     {{/each}}
 
-<script src ="/js/search.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+    crossorigin="anonymous"></script>  
+{{!-- <script src ="/js/search.js"></script> --}}

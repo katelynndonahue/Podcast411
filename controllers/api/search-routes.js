@@ -19,10 +19,11 @@ router.post('/', async (req,res) =>{
 				const podcastData = response.data.results;
 				// console.log(podcastData);
                const podcasts = podcastData.map((pod)=>pod.podcast)
-                // console.log(podcasts);
+                console.log({podcasts});
                 // res.redirect("/api/search");
-                res.render('search',
-                podcasts)
+                // res.render('search',
+                // {podcasts})
+                res.json(podcasts);
 			}).catch((error)=>{
                 console.log(error);
             })

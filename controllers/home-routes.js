@@ -16,10 +16,11 @@ router.get('/', async (req,res)=>{
   
     // console.log(podcasts);
   // res.json(podcasts)
-    res.render('homepage',{
-      podcastData,
-      loggedIn: req.session.loggedIn
-    })
+    res.render("homepage", {
+			podcastData,
+			loggedIn: req.session.loggedIn,
+			playlist_id: req.session.playlist_id,
+		});
     // return podcasts
 }).catch((error) => {
     console.log(error)
@@ -28,25 +29,33 @@ router.get('/', async (req,res)=>{
 })
 router.get("/profile", async (req, res)=>{
   try{
-  const profileData = await User.findByPk(req.session.user_id, {
+  const profileData = await Playlist.findByPk(req.session.playlist_id, {
     include: [{
-      model: Playlist,
+      model: Podcast,
     }]
   })
   console.log(profileData);
-  const profile = profileData.get({plain:true});
-  console.log(profile);
+  const userPlaylist = profileData.get({plain:true});
+  console.log(userPlaylist);
   res.render("profile",{
-    profile,
+    userPlaylist,
     loggedIn: true,
-    user_id: req.session.user_id
+    user_id: req.session.user_id,
+    playlist_id: req.session.playlist_id
   });
   }catch(err){
     res.status(500).json(err);
   }
 })
 router.get("/search", async (req,res)=>{
-  res.render("search");
+  console.log("here");
+  console.log(req.session.playlist_id);
+  res.render("search",
+  {
+
+    playlist_id: req.session.playlist_id
+  }
+  );
 })
 // Login route
 router.get('/login', (req, res) => {
