@@ -2,9 +2,11 @@ const loginFormHandler = async (event) => {
     event.preventDefault();
     const email = document.querySelector('#email-field').value.trim();
     const hashedPassword = document.querySelector('#password-field').value.trim();
-    
+
+    // console.log({email});
+    // console.log({hashedPassword});
+
     if (email && hashedPassword) {
-   ;
       const response = await fetch('/api/user/login', {
         method: 'POST',
         body: JSON.stringify({ email,hashedPassword }),
@@ -30,21 +32,23 @@ const loginFormHandler = async (event) => {
     console.log(email);
     console.log(hashedPassword);
 
-    // if(username && email && hashedPassword){
-    //   const response = await fetch('/api/user',{
-    //     method:"POST",
-    //     body:JSON.stringify({username,email,hashedPassword}),
-    //     headers: { 'Content-Type': 'application/json' },
-    //   })
-    //   console.log(response);
-    //   if (response.ok) {
-    //     document.location.replace('/');
-    //   } else {
-    //     alert('Failed to sign up.');
-    //   }
-    // }
+    if(username && email && hashedPassword){
+      const response = await fetch('/api/user',{
+        method:"POST",
+        body:JSON.stringify({username,email,hashedPassword}),
+        headers: { 'Content-Type': 'application/json' },
+      })
+      console.log(response);
+      if (response.ok) {
+        document.location.replace('/');
+      } else {
+        alert('Failed to sign up.');
+      }
+    }
 
   }
   document.querySelector('#createAccount').addEventListener('submit',signupFormHandler)
-//   $('#login').submit(loginFormHandler);
+  document.querySelector('#login').addEventListener('submit',loginFormHandler)
+
+  // $('#login').submit(loginFormHandler);
 //   $('#createAccount').submit(signupFormHandler)

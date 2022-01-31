@@ -10,12 +10,13 @@ router.get('/', async (req,res)=>{
   }).then((response) => {
     // Get response json data here
     const podcastData = response.data.curated_lists
-  //  console.log(podcastData);
+   console.log(podcastData);
   
     // console.log(podcasts);
   // res.json(podcasts)
     res.render('homepage',{
-      
+      podcastData,
+      loggedIn: req.session.loggedIn
     })
     // return podcasts
 }).catch((error) => {
