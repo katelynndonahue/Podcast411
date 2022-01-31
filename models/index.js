@@ -1,4 +1,4 @@
-const User = require("./User");
+const User = require("./user");
 const Playlist = require("./Playlist");
 const Podcast = require("./Podcast");
 
