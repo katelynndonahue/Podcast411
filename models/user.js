@@ -59,4 +59,3 @@ User.init(
 );
 
 module.exports = User;
-//this is a mofd
