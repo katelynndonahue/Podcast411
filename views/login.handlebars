@@ -1,34 +1,56 @@
 <div class="form-wrapper">
-    <div class="container">
-        <form class="form" id="login"></form>
-            <h1 class="form_title">Login</h1>
-            <div class="form_input-group">
-                <input type="text" class="form_input" placeholder="Username or email">
-            </div>
-            <div class="form_input-group">
-                <input type="text" class="form_input" placeholder="Password">
-                <div class="form_input-error-message"></div>
-            </div>
-            <button class="waves-effect waves-light btn indigo accent-2" type="submit">Login</button>
-
+  <div class="container">
+    <form class="form" id="login"></form>
+    <h1 class="form_title">Login</h1>
+    <div class="form_input-group">
+      <input type="text" class="form_input" placeholder="Username or email" />
     </div>
+    <div class="form_input-group">
+      <input type="text" class="form_input" placeholder="Password" />
+      <div class="form_input-error-message"></div>
+    </div>
+    <button
+      class="waves-effect waves-light btn indigo accent-2"
+      type="submit"
+    >Login</button>
+
+  </div>
 </div>
 <div class="form-wrapper">
   <div class="container container-create">
-      <form class="form" id="createAccount"></form>
-          <h1 class="form_title">Create Account</h1>
-          <div class="form_input-group">
-              <input type="text" class="form_input" placeholder="Username">
-          </div>
-          <div class="form_input-group">
-              <input type="text" class="form_input" placeholder="Email">
-          </div>
-          <div class="form_input-group">
-              <input type="text" class="form_input" placeholder="Password">
-              <div class="form_input-error-message"></div>
-          </div>
-          <button class="waves-effect waves-light btn indigo accent-2" type="submit">Create Account</button>
+    <form class="form" id="createAccount">
+      <h1 class="form_title">Create Account</h1>
+      <div class="form_input-group">
+        <input
+          type="text"
+          class="form_input"
+          placeholder="Username"
+          id="username-signup"
+        />
+      </div>
+      <div class="form_input-group">
+        <input
+          type="text"
+          class="form_input"
+          placeholder="Email"
+          id="email-signup"
+        />
+      </div>
+      <div class="form_input-group">
+        <input
+          type="text"
+          class="form_input"
+          placeholder="Password"
+          id="password-signup"
+        />
+        <div class="form_input-error-message"></div>
+      </div>
+      <button
+        class="waves-effect waves-light btn indigo accent-2"
+        type="submit"
+      >Create Account</button>
+    </form>
   </div>
 </div>
 
-<script src="../public/js/login.js"></script>
+<script src="/js/login.js"></script>
