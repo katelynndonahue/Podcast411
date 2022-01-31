@@ -18,8 +18,8 @@ router.post('/', async (req,res) =>{
 			.then((response) => {
 				const podcastData = response.data.results;
 				// console.log(podcastData);
-                podcasts = podcastData.map((pod)=>pod.podcast)
-                // console.log(podcasts);
+                const podcasts = podcastData.map((pod)=>pod.podcast)
+                console.log(podcasts);
                 // res.redirect("/api/search");
                 res.render('search',
                 podcasts)
