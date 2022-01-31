@@ -14,7 +14,11 @@ router.get('/', async (req,res)=>{
     
     const podcasts = podcastData.map((pod)=>pod)
     console.log(podcasts);
-    res.json(podcasts)
+    // res.json(podcasts)
+    res.render('homepage',{
+      podcasts,
+      
+    }) 
     // return podcasts
 }).catch((error) => {
     console.log(error)
