@@ -6,6 +6,7 @@ const client = Client({apiKey: process.env.API_KEY});
 // let searchEl = document.querySelector(".search");
 // searchEl.value.trim();
 router.get('/', async (req,res) =>{
+    console.log(req);
     client
 			.search({
 				q: "hello",
@@ -14,7 +15,7 @@ router.get('/', async (req,res) =>{
 			})
 			.then((response) => {
 				const podcastData = response.data.results;
-				console.log(podcastData);
+				// console.log(podcastData);
                 podcasts = podcastData.map((pod)=>pod)
                 res.render('search',
                 podcasts)
