@@ -9,13 +9,15 @@
       </ul>
     </div>
     <!-- Search bar -->
-    <div class="wrapper">
-      <input type="text" class="input" placeholder="Self-Care Podcast!">
-      <div class="searchbtn"> 
+    <form class="wrapper" id= "searchForm">
+      <input type="text" class="search" placeholder="Self-Care Podcast!" name = "search" id= "search">
+      <button type = "submit" class="searchbtn" > 
         <i class="material-icons">search</i>
-      </div>
-    </div>
+      </button>
+    </form>
 
     {{#each podcastData as |podcast|}}
     {{> podcast-details}}
     {{/each}}
+
+<script src ="/js/search.js"></script>

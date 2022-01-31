@@ -24,7 +24,9 @@ router.get('/', async (req,res)=>{
   });
 
 })
-
+router.get("/search", async (req,res)=>{
+  res.render("search");
+})
 // Login route
 router.get('/login', (req, res) => {
   if (req.session.loggedIn) {
