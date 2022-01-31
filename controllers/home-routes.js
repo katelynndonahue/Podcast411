@@ -1,6 +1,8 @@
 const router = require('express').Router();
 // const fetchCuratedPodcastsLists  = require('podcast-api');
-const client = require('../config/ListenNotes')
+const client = require('../config/ListenNotes');
+const { User, Podcast, Playlist } = require('../models');
+const withAuth = require('../utils/auth');
 
 router.get('/', async (req,res)=>{
     // console.log(req.method);
@@ -23,6 +25,25 @@ router.get('/', async (req,res)=>{
     console.log(error)
   });
 
+})
+router.get("/profile", async (req, res)=>{
+  try{
+  const profileData = await User.findByPk(req.session.user_id, {
+    include: [{
+      model: Playlist,
+    }]
+  })
+  console.log(profileData);
+  const profile = profileData.get({plain:true});
+  console.log(profile);
+  res.render("profile",{
+    profile,
+    loggedIn: true,
+    user_id: req.session.user_id
+  });
+  }catch(err){
+    res.status(500).json(err);
+  }
 })
 router.get("/search", async (req,res)=>{
   res.render("search");
