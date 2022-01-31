@@ -69,7 +69,7 @@ footer {
 /* Search bar */
 .wrapper {
     position: absolute;
-    top: 50%;
+    top: 30%;
     left: 50%;
     transform: translate(-50%, -50%);
     max-width: 400px;
@@ -204,3 +204,17 @@ span {
 p {
     background: rgba(60, 60, 60, 0);
 }
+
+#home-row {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    margin: auto;
+    right: 25%;
+    top: 160px;
+}
+
+/* a {
+    background: rgba(60, 60, 60, 0);
+
+} */
