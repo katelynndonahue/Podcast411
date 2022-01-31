@@ -6,7 +6,7 @@ const client = Client({apiKey: process.env.API_KEY});
 // let searchEl = document.querySelector(".search");
 // searchEl.value.trim();
 router.post('/', async (req,res) =>{
-    console.log(req.body);
+    // console.log(req.body);
     // let searchEl = document.querySelector(".search");
 	// searchEl.value.trim();
     client
@@ -21,6 +21,7 @@ router.post('/', async (req,res) =>{
                 podcasts = podcastData.map((pod)=>pod.podcast)
                 // console.log(podcasts);
                 // res.redirect("/api/search");
+                console.log(podcasts);
                 res.render('search',
                 podcasts)
 			}).catch((error)=>{
