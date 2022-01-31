@@ -1,5 +1,6 @@
 /* Universal selector */
 * {
+    box-sizing: border-box;
     font-family: 'Space Grotesk', sans-serif;;
     background-color: #9bb1f2;
 }
@@ -9,9 +10,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative;
     background-color: transparent;
-    bottom: 55px;
 }
 
 .footer {
@@ -28,20 +27,137 @@
 img {
     max-width: 400px;
     background: rgba(60, 60, 60, 0);
+    position: relative;
+    bottom: 55px;
 }
 
 /* Header color */
-.nav-wrapper {
-    background-color: #527af2;
+header .nav-wrapper {
+    background-color: #536dfe;
 }
 
 a {
-    background-color: #527af2;
+    background-color: #536dfe;
 }
 
-.slider {
-    $(::-webkit-slider-runnable-track).ready(function(){ */ */ */
-    $('.slider').slick({
-      setting-name: setting-value
-    });
-  })};
+/* Footer */
+footer {
+    position:fixed;
+    bottom:0;
+    left:0;
+    width:100%;
+    height: 50px;
+    background-color: #536dfe;
+}
+
+.shadow {
+    box-shadow: 0px 0 3px rgba(28, 28, 28, 0.632);
+}
+
+/* API Logo */
+.logo {
+    display: flex;
+    justify-content: right;
+    position: relative;
+    top: 45px;
+    right: 5px;
+    width: 100%;
+    height: 25px;
+    background: rgba(60, 60, 60, 0);
+}
+
+/* Search bar */
+.wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 400px;
+    width: 100%;
+    padding: 15px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+}
+
+.wrapper .input {
+    width: 85%;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 6px;
+}
+
+.searchbtn {
+    width: 10%;
+    border-radius: 5px;
+    position: relative;
+    cursor: pointer;
+    background: white;
+}
+
+.material-icons {
+    background: white
+}
+
+/* Profile Icon */
+.profile-pic {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 25%;
+}
+
+.profile {
+    position: relative;
+    bottom: 90px;
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+    color: white;
+}
+
+/* Cards */
+span {
+    background: rgba(60, 60, 60, 0);
+}
+
+.row .col.s1 {
+    align-items: center;
+    text-align: center;
+    width: 25%;
+    position: relative;
+    left: 11%;
+    border: 3px solid #536dfe;
+    padding: 10px;
+    margin: 5px;
+    bottom: 60px;
+}
+ 
+/* Login/Create Account Forms */
+
+.container {
+    font-size: 18px;
+    color: white;
+    width: 400px;
+    max-width: 400px;
+}
+
+.form_message {
+    margin-bottom: 18px;
+}
+
+.form_message-success {
+    color: green;
+}
+
+.form_input-group {
+    margin-bottom: 18px;
+}
+
+.form_input {
+    display: block; 
+    width: 100%;
+    padding: 0.75rem;
+}
+
