@@ -14,6 +14,16 @@
     bottom: 55px;
 }
 
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-color: transparent;
+    background-origin: padding-box;
+    padding: 30px;
+}
+
 /* Logo */
 img {
     max-width: 400px;
@@ -28,3 +38,10 @@ img {
 a {
     background-color: #527af2;
 }
+
+.slider {
+    $(::-webkit-slider-runnable-track).ready(function(){ */ */ */
+    $('.slider').slick({
+      setting-name: setting-value
+    });
+  })};
