@@ -22,14 +22,7 @@
                 <li><a href="">Explore</a></li>
               </ul>
               <ul id="nav-mobile" class="right hide-on-med-and-down">
-
-                {{#if logged_in}}
-                <li><a href="../profile.handlebars">Profile</a></li>
-                <button class="no-button" id="logout">Logout</button>
-                {{else}}
-                <a href="../login.handlebars">Login</a>
-                {{/if}}
-      
+                <li><a href="./profile.html">Sign Up/Login</a></li>
               </ul>
             </div>
           </nav>
@@ -37,44 +30,45 @@
                 <img src="../../assets/Podcast411Logo.png" alt="Podcast411"/>
             </div>
     </header>
-    <main>
-    <!-- Insert Slider -->
-    <div>
-      <ul class="slider">
-        <li>Slide 1</li>
-        <li>Slide 2</li>
-        <li>Slide 3</li>
-      </ul>
+
+<!-- Create Account -->
+
+<div class="form-wrapper">
+    <div class="container">
+        <form class="form" id="createAccount"></form>
+            <h1 class="form_title">Create Account</h1>
+            <div class="form_input-group">
+                <input type="text" class="form_input" placeholder="Username">
+            </div>
+            <div class="form_input-group">
+                <input type="text" class="form_input" placeholder="Email">
+            </div>
+            <div class="form_input-group">
+                <input type="text" class="form_input" placeholder="Password">
+                <div class="form_input-error-message"></div>
+            </div>
+            <button class="waves-effect waves-light btn indigo accent-2" type="submit">Continue</button>
+            <p class="form_text">
+                <a class="form_link" href="./" id="login" >Already have an account? Login!</a>
+            </p>
     </div>
-    <!-- Search bar -->
-    <div class="wrapper">
-      <input type="text" class="input" placeholder="Self-Care Podcast!">
-      <div class="searchbtn"> 
-        <i class="material-icons">search</i>
-      </div>
-    </div>
-    </main>
+</div>
+
+
+
     <!-- Footer with api logo -->
     <footer class="shadow">
       <div class="logo">
         <img src="../../assets/api-transparent background for non-white background.png" alt="Listen Notes Logo"/>
       </div>
     </footer>
-
-    {{#if logged_in}}
-
-    <script src="/public/js/logout.js"></script>
-    {{/if}}
-
 </body>
   <!-- Script for JQuery -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"
     integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
     crossorigin="anonymous"></script>  
-    <!-- Script for Slick -->
-<script type = "text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
-<script type="text/javascript">
-$('slider').slick();</script>
 <!-- Script for materialize -->
 <link rel="script" href="./js/materialize.min.js">
+<!-- Script for login -->
+<link rel="script" href="../../public/js/login.js"
 </html>
