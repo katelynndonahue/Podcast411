@@ -40,6 +40,18 @@ a {
     background-color: #536dfe;
 }
 
+#logout {
+    color: white;
+    background-color: #536dfe;
+    border: none;
+}
+
+
+.no-no-button {
+    background-color: #536dfe;
+}
+
+
 /* Footer */
 footer {
     position:fixed;
@@ -97,12 +109,9 @@ footer {
     background: white;
 }
 
-.searchbtn:active {
+.searchbtn:focus {
     background-color: white;
-}
 
-.material-icons {
-    /* background: white; */
 }
 
 /* Profile Icon */
@@ -228,6 +237,46 @@ p {
     text-align: center;
     padding-bottom: 2px;
     color: white;
-    margin-top: 240px;
+    margin-top: 40px;
     text-decoration: red underline;
+}
+
+
+/* Delete 1 without deleting 1 */
+#playlistId {
+    display: none;
+}
+
+
+/* Search-result cards */
+
+.search-row {
+    position: relative;
+    left: 10.5%;
+    top: 200px;
+    margin-bottom: 60px;
+    max-width: 50%;
+}
+
+.search-title {
+    font-weight: bold;
+}
+
+.search-content {
+    background-color: white;
+}
+
+.search-link {
+    background: rgba(60, 60, 60, 0);
+    color: red;
+}
+
+.black-text {
+    background: red;
+    border-radius: 4px;
+}
+
+
+#email-field {
+    background: rgba(60, 60, 60, 0);
 }
