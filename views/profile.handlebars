@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!-- Profile -->
 <div>
   <img class="profile-pic" src="../../assets/ProfilePic.png" alt="User" />
@@ -34,3 +35,18 @@
   src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"
 ></script>
 <script src="/js/profile.js"></script>
+=======
+ <!-- Profile -->
+    <div>
+        <img class="profile-pic" src="../../assets/ProfilePic.png" alt="User" />
+        <h1 class="profile">{{user.username}}</h1>
+    </div>
+    <!-- Cards for Podcasts and Playlists -->
+    <div class="row">
+        {{!-- try partial if not hardcode profile pod cards elements --}}
+    {{#each userPlaylist.podcasts as |podcast|}}
+    {{> podcast-details}}
+    {{/each}}
+    </div>
+    <script src="/js/profile.js"></script>
+>>>>>>> 260846e6465020509911c52ef451ef1b92a47064

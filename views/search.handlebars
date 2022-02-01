@@ -1,5 +1,38 @@
-    {{#each podcasts as |podcast|}}
-    {{> search-results}}
-    {{/each}}
+    <h1 id= "playlistId">{{playlist_id}}</h1>
+      <form class="wrapper" id= "searchForm">
+      <input type="text" class="search" placeholder="Self-Care Podcast!" name = "search" id= "search">
+      <button type = "submit" class="searchbtn" > 
+        <i class="white material-icons">search</i>
+      </button>
+    </form>
+    <div id = "searchRes">
+    {{!-- {{#each podcasts as |podcast|}}
+    {{!-- {{> search-results}} --}}
+    {{!-- Cards for search --}}
 
+  {{!-- <div class="row">
+    <div class="col s12 m7">
+      <div class="card">
+        <div class="card-image">
+          <img src="{{podcast.thumbnail}}">
+          <span class="card-title">{{podcast.title_highlighted}}</span>
+        </div>
+        <div class="card-content">
+          <p>{{podcast.publisher_highlighted}}</p>
+        </div>
+        <div class="card-action">
+          <a href="{{podcast.listennotes_url}}">Link to podcast!</a>
+          <button href="#" class="red-text" id="saveToProfile">Save</button>
+
+        </div>
+      </div>
+    </div>
+  </div>
+    {{/each}} --}} 
+    {{!-- --}}
+</div>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+    crossorigin="anonymous"></script>  
 <script src ="/js/search.js"></script>

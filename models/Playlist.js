@@ -28,7 +28,7 @@ Playlist.init(
 		timestamps: false,
 		freezeTableName: true,
 		underscored: true,
-		modelName: "playlsit",
+		modelName: "playlist",
 	}
 );
 

@@ -32,35 +32,25 @@
     </header>
   <!-- Search -->
     <main>
-      <div>
-        <hi class="search-results">Search Results for...""</hi>
+      {{!-- Cards for search --}}
+      <div class="row" id="search-row">
+        <div class="col s12 m7">
+          <div class="card">
+            <div class="card-image">
+              <img src="../../public/assets/images/myFavoriteMurderImage.jpeg">
+            </div>
+            <div class="card-content" id="search-content">
+              <p class="card-title" id="search-title">{{title_highlighted}}</p>
+              <p>{{publisher_highlighted}}</p>
+            </div>
+            <div class="card-action">
+              <a id="search-link" href="{{listennotes_url}}">Link to podcast!</a>
+              <button href="#" class="black-text" id="saveToProfile">SAVE</button>
+    
+            </div>
+          </div>
+        </div>
       </div>
-      <ul class="collection">
-        <li class="collection-item avatar">
-          <i class="material-icons circle red">play_arrow</i>
-          <span class="title">Title</span>
-          <p>First Line <br>
-             Second Line
-          </p>
-          <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
-        </li>
-        <li class="collection-item avatar">
-          <i class="material-icons circle red">play_arrow</i>
-          <span class="title">Title</span>
-          <p>First Line <br>
-             Second Line
-          </p>
-          <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
-        </li>
-        <li class="collection-item avatar">
-          <i class="material-icons circle red">play_arrow</i>
-          <span class="title">Title</span>
-          <p>First Line <br>
-             Second Line
-          </p>
-          <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
-        </li>
-      </ul>         
     </main>
   <!-- Footer with api logo -->
     <footer class="shadow">

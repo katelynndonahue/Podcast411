@@ -40,8 +40,15 @@ router.post("/", async (req, res) => {
         res.status(404).json({ message: "Please try again!" });
         return;
       }
+      const playlist = await Playlist.create({
+        title: userData.username,
+        user_id: userData.id
+      });
+
       req.session.save(() => {
         req.session.loggedIn = true;
+        req.session.user_id = userData.id;
+        req.session.playlist_id = playlist.id;
       res.status(200).json(userData);
       });
     } catch (err) {
@@ -54,10 +61,15 @@ router.post('/login', async (req, res) => {
   console.log(req.body);
   try {
       const dbUserData = await User.findOne({
-        where: {
-          email: req.body.email,
-        },
-      });
+				where: {
+					email: req.body.email,
+				},
+				include: [
+					{
+						model: Playlist,
+					},
+				],
+			});
   
       if (!dbUserData) {
         res
@@ -74,9 +86,11 @@ router.post('/login', async (req, res) => {
           .json({ message: 'Incorrect email or password. Please try again!' });
         return;
       }
-  
+      console.log(dbUserData);
       req.session.save(() => {
         req.session.loggedIn = true;
+        req.session.user_id = dbUserData.id;
+        req.session.playlist_id = dbUserData.playlist.id;
   
         res
           .status(200)

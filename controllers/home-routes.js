@@ -1,6 +1,8 @@
 const router = require('express').Router();
 // const fetchCuratedPodcastsLists  = require('podcast-api');
-const client = require('../config/ListenNotes')
+const client = require('../config/ListenNotes');
+const { User, Podcast, Playlist } = require('../models');
+const withAuth = require('../utils/auth');
 
 router.get('/', async (req,res)=>{
     // console.log(req.method);
@@ -14,20 +16,46 @@ router.get('/', async (req,res)=>{
   
     // console.log(podcasts);
   // res.json(podcasts)
-
-    
-    res.render('homepage',{
-      podcastData,
-      loggedIn: req.session.loggedIn
-    })
+    res.render("homepage", {
+			podcastData,
+			loggedIn: req.session.loggedIn,
+			playlist_id: req.session.playlist_id,
+		});
     // return podcasts
 }).catch((error) => {
     console.log(error)
   });
 
 })
+router.get("/profile", async (req, res)=>{
+  try{
+  const profileData = await Playlist.findByPk(req.session.playlist_id, {
+    include: [{
+      model: Podcast,
+    }]
+  })
+  console.log(profileData);
+  const userPlaylist = profileData.get({plain:true});
+  console.log(userPlaylist);
+  res.render("profile",{
+    userPlaylist,
+    loggedIn: true,
+    user_id: req.session.user_id,
+    playlist_id: req.session.playlist_id
+  });
+  }catch(err){
+    res.status(500).json(err);
+  }
+})
 router.get("/search", async (req,res)=>{
-  res.render("search");
+  console.log("here");
+  console.log(req.session.playlist_id);
+  res.render("search",
+  {
+
+    playlist_id: req.session.playlist_id
+  }
+  );
 })
 // Login route
 router.get('/login', (req, res) => {
