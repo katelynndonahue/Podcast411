@@ -79,6 +79,7 @@ footer {
     display: flex;
     justify-content: space-between;
     background-color: white;
+    box-shadow: 5px 5px 10px 5px#f254f587;
 }
 
 .wrapper .input {
@@ -96,8 +97,12 @@ footer {
     background: white;
 }
 
+.searchbtn:active {
+    background-color: white;
+}
+
 .material-icons {
-    background: white
+    /* background: white; */
 }
 
 /* Profile Icon */
@@ -206,15 +211,23 @@ p {
 }
 
 #home-row {
-    display: flex;
-    justify-content: center;
     position: relative;
-    margin: auto;
-    right: 25%;
-    top: 160px;
-}
+    left: 25%;
+    top: 20px;
+    margin-bottom: 60px;
+} 
 
-/* a {
+.pink-text {
     background: rgba(60, 60, 60, 0);
 
-} */
+}
+
+.featured {
+    font-size: 32px;
+    display: block;
+    text-align: center;
+    padding-bottom: 2px;
+    color: white;
+    margin-top: 240px;
+    text-decoration: red underline;
+}
