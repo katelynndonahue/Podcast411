@@ -59,6 +59,7 @@ router.get("/search", async (req,res)=>{
 })
 // Login route
 router.get('/login', (req, res) => {
+  
   if (req.session.loggedIn) {
     res.redirect('/');
     return;
@@ -77,5 +78,7 @@ router.post('/logout', (req, res) => {
     res.status(404).end();
   }
 });
+
+
 
 module.exports = router
