@@ -1,42 +1,13 @@
  <!-- Profile -->
     <div>
         <img class="profile-pic" src="../../assets/ProfilePic.png" alt="User" />
-        <h1 class="profile">User Name</h1>
+        <h1 class="profile"></h1>
     </div>
     <!-- Cards for Podcasts and Playlists -->
     <div class="row">
-        <div class="col s1">
-            <div class="card-panel indigo accent-2">
-                <span class="white-text"> Playlist 1 </span>
-              </div>
-        </div>
-        <div class="col s1">
-            <div class="card-panel indigo accent-2">
-                <span class="white-text"> Playlist 2 </span>
-              </div>
-        </div>
-        <div class="col s1">
-            <div class="card-panel indigo accent-2">
-                <span class="white-text"> Playlist 3 </span>
-              </div>
-        </div>
+        {{!-- try partial if not hardcode profile pod cards elements --}}
+    {{#each userPlaylist.podcasts as |podcast|}}
+    {{> podcast-details}}
+    {{/each}}
     </div>
-    <div class="row">
-        <div class="col s1">
-            <div class="card-panel indigo accent-2">
-                <span class="white-text"> Playlist 4 </span>
-              </div>
-        </div>
-        <div class="col s1">
-            <div class="card-panel indigo accent-2">
-                <span class="white-text"> Playlist 5 </span>
-              </div>
-        </div>
-        <div class="col s1">
-            <div class="card-panel indigo accent-2">
-                <span class="white-text"> Playlist 6 </span>
-              </div>
-        </div>
-    </div>
-
     <script src="/js/profile.js"></script>
