@@ -19,19 +19,19 @@ const searchFormHandler = async (event) => {
 			console.log(data);
 			for (let i = 0; i < data.length; i++) {
 				const podcast = data[i];
-				let template = `<div class="row">
+				let template = `<div class="row search-row">
     <div class="col s12 m7">
       <div class="card">
         <div class="card-image">
           <img src="${podcast.thumbnail}">
-          <span class="card-title">${podcast.title_highlighted}</span>
         </div>
-        <div class="card-content">
+        <div class="card-content search-content">
+		<p class="card-title search-title">${podcast.title_highlighted}</p>
           <p>${podcast.publisher_highlighted}</p>
         </div>
         <div class="card-action">
-          <a href="${podcast.listennotes_url}">Link to podcast!</a>
-          <button class="red-text saveToProfile">Save</button>
+          <a class="search-link" href="${podcast.listennotes_url}">Link to podcast!</a>
+          <button class="black-text saveToProfile">Save</button>
         </div>
       </div>
     </div>
