@@ -1,41 +1,3 @@
-<<<<<<< HEAD
-<!-- Profile -->
-<div>
-  <img class="profile-pic" src="../../assets/ProfilePic.png" alt="User" />
-  <h1 class="profile">User Name</h1>
-</div>
-<!-- Cards for Podcasts and Playlists -->
-<div class="row carousel">
-    {{#each podcasts as |podcast|}}
-    <a href="{{podcast.listennotes_url}}">
-    <div class="col s12 m7">
-      <div class="card">
-        <div class="card-image">
-          <img src="{{podcast.thumbnail}}">
-          <span class="card-title">{{podcast.title}}</span>
-        </div>
-        <div class="card-content">
-          <p>{{podcast.publisher}}</p>
-        </div>
-        {{!-- <div class="card-action">
-          {{!-- <a href="#">This is a link</a> --}}
-        </div> --}}
-      </div>
-    </div>
-    </a>
-{{/each}}
-  {{!-- <div class="col s1">
-    <div class="card-panel indigo accent-2">
-      <span class="white-text"> Playlist 6 </span>
-    </div>
-  </div> --}}
-</div>
-<script
-  type="text/javascript"
-  src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"
-></script>
-<script src="/js/profile.js"></script>
-=======
  <!-- Profile -->
     <div>
         <img class="profile-pic" src="../../assets/ProfilePic.png" alt="User" />
@@ -49,4 +11,3 @@
     {{/each}}
     </div>
     <script src="/js/profile.js"></script>
->>>>>>> 260846e6465020509911c52ef451ef1b92a47064
